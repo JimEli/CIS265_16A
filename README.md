@@ -8,11 +8,11 @@ Use the `mktime` and `difftime` functions.
 
 ## Notes:
 
-1. I found the mktime and difftime functions restrictive (earliest date is Unix epoch, 32-bit limit for max year is 2038 and 64-bit limit for year is 3000). And I wanted greater range of dates than what mktime/difftime allows.
-2. The Julian date conversion is only accurate between years 1801 and 2099. Outside this range, julian date differs with gregorian calendar due to leap year determination.
-3. Program combines MSVC mktime/difftime functions with Julian date  algorithm from U.S. Naval Observatory's "Almanac for Computers",  published 1990 (discontinued). This is transparent to the user.
-4. As such, date constrained between 1801-3000 to insure accuracy.
-5. Accuraccy confirmed with embedded unit tests, see comments inside main() function.
+1. I found the mktime and difftime functions restrictive. The earliest date is the Unix epoch (1/1/1970), and the 32-bit limit for the maximum year is 2038 with the 64-bit limit for being the year of 3000. I wanted a greater range of dates than what mktime/difftime allowed.
+2. The included Julian date conversion is only accurate between the years 1801 and 2099. Outside this range, the julian date differs with the gregorian calendar due to differneces in leap year determination.
+3. Therefore, the program combines MSVC mktime/difftime functions with a Julian date algorithm from the U.S. Naval Observatory's "Almanac for Computers", published 1990 (discontinued). This functionality is transparent to the user.
+4. As such, the date is constrained between 1801-3000 to insure accuracy.
+5. Accuraccy is confirmed with embedded unit tests, see comments inside main() function. These tests are only compiled under the debug version.
 6. Compiled with MS Visual Studio 2017 Community (v141), using C language options.
 
 *Submitted in partial fulfillment of the requirements of PCC CIS-265.*
