@@ -78,7 +78,7 @@ time_t convertDateToTime(const Date date) {
 	tmDate.tm_mon = date.month - 1;      // Month since January (0-11).
 	tmDate.tm_mday = date.day;           // Days of month (1-31).
 	tmDate.tm_year = (date.year - 1900); // Year since 1900.
-										 // Convert struct tm to time_t.
+	// Convert struct tm to time_t.
 	return mktime(&tmDate);
 }
 
@@ -86,7 +86,7 @@ time_t convertDateToTime(const Date date) {
 double deltaDays(const Date start, const Date end) {
 	double delta; // days between dates, return value.
 
-				  // If both dates prioir to Unix epoch, use only julian calculation.
+	// If both dates prioir to Unix epoch, use only julian calculation.
 	if (start.year < UNIX_EPOCH_YEAR && end.year < UNIX_EPOCH_YEAR)
 		delta = julian(end) - julian(start);
 	// Take the difference between start and end time_t, which yields the difference between dates 
