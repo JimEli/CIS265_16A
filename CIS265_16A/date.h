@@ -56,6 +56,10 @@
 #define MAX_YEAR           3000      // Maximum end date (64-bit functions).
 #endif
 
+#define JULIAN_01_01_1801  2378861   // Julian date for 1/1/1801 = 2378861.
+#define JULIAN_01_01_1970  2440587   // Julian date for 1/1/1970 = 2440587.
+#define JULIAN_12_31_2099  2488068   // Julian date for 12/31/2099 = 2488068.
+
 #define INSTRUCTIONS	"This program calculates the difference in days between two calendar" \
 			" dates.\nThe dates must fall between the year %d and %d.\n\n"
 
