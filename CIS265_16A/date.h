@@ -57,7 +57,7 @@
 #endif
 
 #define INSTRUCTIONS	"This program calculates the difference in days between two calendar" \
-						" dates.\nThe dates must fall between the year %d and %d.\n\n"
+			" dates.\nThe dates must fall between the year %d and %d.\n\n"
 
 // Simple date structure.
 struct  Date_ {
