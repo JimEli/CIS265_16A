@@ -92,9 +92,9 @@ int main() {
 	fputs("DEBUG VERSION: Conducting validity check of consecutive dates. ", stdout);
 
 	// Julian dates retrieved from: http://aa.usno.navy.mil/data/docs/JulianDate.php
-	assert(2378861 == (int)julian((Date){ 1, 1, 1801 }));   // Julian date for 1/1/1801 = 2378861.
-	assert(2440587 == (int)julian((Date){ 1, 1, 1970 }));   // Julian date for 1/1/1970 = 2440587.
-	assert(2488068 == (int)julian((Date){ 12, 31, 2099 }));	// Julian date for 12/31/2099 = 2488068.
+	assert(JULIAN_01_01_1801 == (int)julian((Date){ 1, 1, 1801 }));   // Julian date for 1/1/1801 = 2378861.
+	assert(JULIAN_01_01_1970 == (int)julian((Date){ 1, 1, 1970 }));   // Julian date for 1/1/1970 = 2440587.
+	assert(JULIAN_12_31_2099 == (int)julian((Date){ 12, 31, 2099 })); // Julian date for 12/31/2099 = 2488068.
 
 	int numDays = 0; // Consectutive date counter
 
